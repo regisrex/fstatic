@@ -52,8 +52,6 @@ app.post('/files/upload', upload.single('file'), (req, res) => {
 
 app.delete('/files/delete', (req, res) => {
   try {
-
-
     const { url } = req.body;
     if (!url) {
       return res.status(400).json({ message: 'No URL provided' });
